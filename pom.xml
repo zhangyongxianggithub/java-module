@@ -21,11 +21,6 @@
                     <configuration>
                         <source>21</source>
                         <target>21</target>
-                        <archive>
-                            <manifest>
-                                <mainClass>com.ramki.project.Main</mainClass>
-                            </manifest>
-                        </archive>
                     </configuration>
                 </plugin>
             </plugins>
