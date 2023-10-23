@@ -5,6 +5,7 @@ import com.example.expenses.readers.Reader;
 public class FileReader implements Reader {
     @Override
     public String read(final String path) {
-        return "file";
+       // return FileReader.class.getClassLoader().getResourceAsStream("classpath:file.txt");
+        return "tezt";
     }
 }
