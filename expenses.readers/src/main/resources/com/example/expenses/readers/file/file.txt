@@ -1,0 +1,7 @@
+A comparison of different ways of resources loading in Java
+Followings are the preferred ways to load resources in classpath.
+
+this.getClass().getResource(resourceName): It tries to find the resource in the same package as 'this' class unless we use absolute path starting with '/'
+Thread.currentThread().getContextClassLoader().getResource(resourceName): A ClassLoader can be passed (shared) when creating a new thread using Thread.setContextClassLoader, so that different thread contexts can load each other classes/resources. If not set, the default is the ClassLoader context of the parent Thread. This method is not appropriate if we want to load resources inside the packages unless we use complete paths starting from root.
+
+ClassLoader.getSystemClassLoader().getResource(resourceName) : ClassLoader.getSystemClassLoader() gives the class loader used to start the application. we have to use complete path for the resources starting from root.
