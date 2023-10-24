@@ -10,6 +10,9 @@ import com.example.expenses.readers.Reader;
 
 import static java.net.http.HttpClient.Redirect.NORMAL;
 
+/**
+ * @author zyxue
+ */
 public class HttpReader implements Reader {
     
     private static final HttpClient httpClient = HttpClient.newBuilder()
