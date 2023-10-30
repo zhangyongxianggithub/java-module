@@ -8,11 +8,14 @@ import java.time.Duration;
 
 import com.example.expenses.readers.Reader;
 
+import lombok.extern.slf4j.Slf4j;
+
 import static java.net.http.HttpClient.Redirect.NORMAL;
 
 /**
  * @author zyxue
  */
+@Slf4j
 public class HttpReader implements Reader {
     
     private static final HttpClient httpClient = HttpClient.newBuilder()
